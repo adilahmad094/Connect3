@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.adilahmad.connect3.MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:background="@drawable/board"
+        android:columnCount="3"
+        android:padding="2dp"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/counter1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="0"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="3"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="4"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="5"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="6"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="7"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <ImageView
+            android:id="@+id/counter9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="dropIn"
+            android:padding="10dp"
+            android:tag="8"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="143dp" />
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/playAgainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="WinnerName"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/playAgainButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="playAgain"
+            android:text="Play Again" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/player1TextView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:background="?attr/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="  Player1"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player2TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player2TextView" />
+
+    <TextView
+        android:id="@+id/player2TextView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:background="?attr/colorAccent"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="  Player2"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="151dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/beaver" />
+</android.support.constraint.ConstraintLayout>
